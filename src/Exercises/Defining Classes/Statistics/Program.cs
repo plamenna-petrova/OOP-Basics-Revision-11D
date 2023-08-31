@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace Statistics
 {
+    // Exercise: Defining Classes Task #3
+
     public class Person
     {
         private string name;

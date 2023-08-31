@@ -2,6 +2,8 @@
 
 namespace DefinePersonClass
 {
+    // Exercise: Defining Classes Task #1
+
     public class Person
     {
         public string name;

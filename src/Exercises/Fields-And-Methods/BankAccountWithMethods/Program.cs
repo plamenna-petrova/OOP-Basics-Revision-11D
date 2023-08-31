@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DefiningBankAccountClass
+namespace BankAccountWithMethods
 {
-    // Exercise: Fields And Properties Task #1
+    // Exercise: Methods Task #2
 
     public class BankAccount
     {
@@ -26,6 +26,21 @@ namespace DefiningBankAccountClass
             get { return balance; }
             set { balance = value; }
         }
+
+        public void Deposit(double amount)
+        {
+            this.balance += amount;
+        }
+
+        public void Withdraw(double amount)
+        {
+            this.balance -= amount;
+        }
+
+        public override string ToString()
+        {
+            return $"Account {this.id}, balance: {this.balance}";
+        }
     }
 
     public class Program
@@ -35,9 +50,10 @@ namespace DefiningBankAccountClass
             BankAccount bankAccount = new BankAccount();
 
             bankAccount.ID = 1;
-            bankAccount.Balance = 15;
+            bankAccount.Deposit(15);
+            bankAccount.Withdraw(5);
 
-            Console.WriteLine($"Account: {bankAccount.ID}, balance {bankAccount.Balance}");
+            Console.WriteLine(bankAccount.ToString());
         }
     }
 }

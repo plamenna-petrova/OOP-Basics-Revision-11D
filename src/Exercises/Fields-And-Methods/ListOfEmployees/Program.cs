@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace ListOfEmployees
 {
+    // Exercise: Fields And Properties Task #3
+
     public class Employee
     {
         private string name;

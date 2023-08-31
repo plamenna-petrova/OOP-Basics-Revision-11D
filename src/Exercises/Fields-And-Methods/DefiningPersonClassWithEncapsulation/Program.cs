@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace DefiningPersonClassWithEncapsulation
 {
+    // Exercise: Fields And Properties Task #2
+
     public class Person
     {
         private string name;
@@ -22,7 +24,7 @@ namespace DefiningPersonClassWithEncapsulation
         }
     }
 
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

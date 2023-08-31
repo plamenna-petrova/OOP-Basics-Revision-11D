@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
-namespace Family
+namespace OldestFamilyMember
 {
-    // Exercise: Defining Classes Task #2
+    // Exercise: Fields And Properties Task #4
 
     public class Person
     {
@@ -20,28 +21,41 @@ namespace Family
 
         public string Name { get => name; set => name = value; }
 
-        public int Age { get => age; set => age = value; }  
+        public int Age { get => age; set => age = value; }
+
+        public override string ToString()
+        {
+            return $"{Name} {Age}"; 
+        }
     }
 
     public class Family
     {
         public List<Person> FamilyMembers { get; set; } = new List<Person>();
+
+        public void AddMember(Person familyMember)
+        {
+            FamilyMembers.Add(familyMember);
+        }
+
+        public Person GetOldestMember()
+        {
+            return FamilyMembers.OrderByDescending(x => x.Age).First();
+        }
     }
 
     public class Program
     {
-        static void PrintFamilyMembersInfo(Family family)
-        {
-            List<Person> orderedFamilyMembersByName = family.FamilyMembers.OrderBy(fm => fm.Name).ToList();
-
-            foreach (Person familyMember in orderedFamilyMembersByName)
-            {
-                Console.WriteLine($"{familyMember.Name} {familyMember.Age}");
-            }
-        }
-
         static void Main(string[] args)
         {
+            MethodInfo oldestMemberMethod = typeof(Family).GetMethod("GetOldestMember");
+            MethodInfo addMemberMethod = typeof(Family).GetMethod("AddMember");
+
+            if (oldestMemberMethod == null || addMemberMethod == null)
+            {
+                throw new Exception();
+            }
+
             int familyMembersCount = int.Parse(Console.ReadLine());
 
             Family family = new Family();
@@ -58,7 +72,8 @@ namespace Family
                 familyMembersCount--;
             }
 
-            PrintFamilyMembersInfo(family);
+            Person oldestFamilyMember = family.GetOldestMember();
+            Console.WriteLine(oldestFamilyMember.ToString());
         }
     }
 }
