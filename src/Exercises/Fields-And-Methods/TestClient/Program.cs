@@ -113,7 +113,7 @@ namespace TestClient
             }
             else
             {
-                Console.WriteLine("Accoutn does not exist");
+                Console.WriteLine("Account does not exist");
             }
         }
 
