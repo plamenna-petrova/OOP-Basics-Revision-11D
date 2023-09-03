@@ -43,9 +43,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawData", "Exercises\Fields
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarTrips", "Exercises\Fields-And-Methods\CarTrips\CarTrips.csproj", "{80F25E94-C7C8-4429-8E71-33DCEFBDE861}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectanglesOverlapping", "Exercises\Fields-And-Methods\RectanglesOverlapping\RectanglesOverlapping.csproj", "{8B411286-5ECC-4676-90AD-3894CC7AA5BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectanglesOverlapping", "Exercises\Fields-And-Methods\RectanglesOverlapping\RectanglesOverlapping.csproj", "{8B411286-5ECC-4676-90AD-3894CC7AA5BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealer", "Exercises\Fields-And-Methods\CarDealer\CarDealer.csproj", "{C83594E4-7029-4991-9793-1209228A5B2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealer", "Exercises\Fields-And-Methods\CarDealer\CarDealer.csproj", "{C83594E4-7029-4991-9793-1209228A5B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTrainer", "Exercises\Fields-And-Methods\PokemonTrainer\PokemonTrainer.csproj", "{89EFDC80-ED94-47DF-AA92-9A3F3292E196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google", "Exercises\Fields-And-Methods\Google\Google.csproj", "{66B3885E-3059-439A-BB65-699BF5B7EEE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +133,14 @@ Global
 		{C83594E4-7029-4991-9793-1209228A5B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C83594E4-7029-4991-9793-1209228A5B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83594E4-7029-4991-9793-1209228A5B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89EFDC80-ED94-47DF-AA92-9A3F3292E196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89EFDC80-ED94-47DF-AA92-9A3F3292E196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89EFDC80-ED94-47DF-AA92-9A3F3292E196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89EFDC80-ED94-47DF-AA92-9A3F3292E196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B3885E-3059-439A-BB65-699BF5B7EEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B3885E-3059-439A-BB65-699BF5B7EEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B3885E-3059-439A-BB65-699BF5B7EEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B3885E-3059-439A-BB65-699BF5B7EEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +167,8 @@ Global
 		{80F25E94-C7C8-4429-8E71-33DCEFBDE861} = {86A24EAB-A28C-4F76-986E-250E8BF201E0}
 		{8B411286-5ECC-4676-90AD-3894CC7AA5BE} = {86A24EAB-A28C-4F76-986E-250E8BF201E0}
 		{C83594E4-7029-4991-9793-1209228A5B2E} = {86A24EAB-A28C-4F76-986E-250E8BF201E0}
+		{89EFDC80-ED94-47DF-AA92-9A3F3292E196} = {86A24EAB-A28C-4F76-986E-250E8BF201E0}
+		{66B3885E-3059-439A-BB65-699BF5B7EEE2} = {86A24EAB-A28C-4F76-986E-250E8BF201E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {238B235E-2AF7-4204-91ED-3907BC09DE3C}
