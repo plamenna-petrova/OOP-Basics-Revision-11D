@@ -411,24 +411,25 @@ namespace FamilyTree
                             .Where(p => p.FirstName == person.FirstName && p.LastName == p.LastName)
                             .FirstOrDefault();
 
-                        if (personWithNames != null)
+                        Person personWithBirthDate = peopleInFamilyTree
+                            .Where(p => p.BirthDate == person.BirthDate)
+                            .FirstOrDefault();
+
+                        if (personWithNames == null && personWithBirthDate == null)
                         {
-                            personWithNames.BirthDate = person.BirthDate;
+                            peopleInFamilyTree.Add(person);
                         }
                         else
                         {
-                            Person personWithBirthDate = peopleInFamilyTree
-                                .Where(p => p.BirthDate == person.BirthDate)
-                                .FirstOrDefault();
+                            if (personWithNames != null)
+                            {
+                                personWithNames.BirthDate = person.BirthDate;
+                            }
 
                             if (personWithBirthDate != null)
                             {
                                 personWithBirthDate.FirstName = person.FirstName;
                                 personWithBirthDate.LastName = person.LastName;
-                            }
-                            else
-                            {
-                                peopleInFamilyTree.Add(person);
                             }
                         }
                     }
@@ -444,6 +445,7 @@ namespace FamilyTree
                 Person firstNotedPersonInFamilyTree = peopleInFamilyTree[0];
 
                 Person matchingPersonWithBirthDate = peopleInFamilyTree
+                    .Skip(1)
                     .Where(p => p.BirthDate == firstNotedPersonInFamilyTree.BirthDate)    
                     .FirstOrDefault();
 
@@ -455,6 +457,7 @@ namespace FamilyTree
                 }
 
                 Person matchingPersonWithNames = peopleInFamilyTree
+                    .Skip(1)
                     .Where(p => p.FirstName == firstNotedPersonInFamilyTree.FirstName && 
                                 p.LastName == firstNotedPersonInFamilyTree.LastName)
                     .FirstOrDefault();
