@@ -453,9 +453,14 @@ namespace FamilyTree
 
                 if (matchingPersonWithBirthDate != null)
                 {
-                    firstNotedPersonInFamilyTree.Parents = firstNotedPersonInFamilyTree.Parents.Union(matchingPersonWithBirthDate.Parents).ToList();
-                    firstNotedPersonInFamilyTree.Children = firstNotedPersonInFamilyTree.Children.Union(matchingPersonWithBirthDate.Children).ToList();
-                    peopleInFamilyTree.Remove(matchingPersonWithBirthDate);
+                    firstNotedPersonInFamilyTree.Parents = firstNotedPersonInFamilyTree.Parents
+                        .Union(matchingPersonWithBirthDate.Parents)
+                        .ToList();
+                    firstNotedPersonInFamilyTree.Children = firstNotedPersonInFamilyTree.Children
+                        .Union(matchingPersonWithBirthDate.Children)
+                        .ToList();
+                    peopleInFamilyTree
+                        .Remove(matchingPersonWithBirthDate);
                 }
 
                 Person matchingPersonWithNames = peopleInFamilyTree
@@ -466,9 +471,14 @@ namespace FamilyTree
 
                 if (matchingPersonWithNames != null)
                 {
-                    firstNotedPersonInFamilyTree.Parents = firstNotedPersonInFamilyTree.Parents.Union(matchingPersonWithNames.Parents).ToList();
-                    firstNotedPersonInFamilyTree.Children = firstNotedPersonInFamilyTree.Children.Union(matchingPersonWithNames.Children).ToList();
-                    peopleInFamilyTree.Remove(matchingPersonWithNames);
+                    firstNotedPersonInFamilyTree.Parents = firstNotedPersonInFamilyTree.Parents
+                        .Union(matchingPersonWithNames.Parents)
+                        .ToList();
+                    firstNotedPersonInFamilyTree.Children = firstNotedPersonInFamilyTree.Children
+                        .Union(matchingPersonWithNames.Children)
+                        .ToList();
+                    peopleInFamilyTree
+                        .Remove(matchingPersonWithNames);
                 }
 
                 Console.WriteLine(firstNotedPersonInFamilyTree.ToString());

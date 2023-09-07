@@ -71,9 +71,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxCheck", "Exercises\Data-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping", "Exercises\Data-Encapsulation\Shopping\Shopping.csproj", "{70F9F8C7-77F3-4B0C-A440-0F606CCAB0F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstAndReserveTeam", "Exercises\Data-Encapsulation\FirstAndReserveTeam\FirstAndReserveTeam.csproj", "{BED608AC-2B02-40CD-AE74-3AF2BA7733C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstAndReserveTeam", "Exercises\Data-Encapsulation\FirstAndReserveTeam\FirstAndReserveTeam.csproj", "{BED608AC-2B02-40CD-AE74-3AF2BA7733C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingAFootballTeam", "Exercises\Data-Encapsulation\CreatingAFootballTeam\CreatingAFootballTeam.csproj", "{F99F6C4A-42D5-468F-86A0-3D9AA107D646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreatingAFootballTeam", "Exercises\Data-Encapsulation\CreatingAFootballTeam\CreatingAFootballTeam.csproj", "{F99F6C4A-42D5-468F-86A0-3D9AA107D646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloriesForPizza", "Exercises\Data-Encapsulation\CaloriesForPizza\CaloriesForPizza.csproj", "{506B4AAA-2601-4020-9E42-3EB5008ED2F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,10 @@ Global
 		{F99F6C4A-42D5-468F-86A0-3D9AA107D646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F99F6C4A-42D5-468F-86A0-3D9AA107D646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F99F6C4A-42D5-468F-86A0-3D9AA107D646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506B4AAA-2601-4020-9E42-3EB5008ED2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506B4AAA-2601-4020-9E42-3EB5008ED2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506B4AAA-2601-4020-9E42-3EB5008ED2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506B4AAA-2601-4020-9E42-3EB5008ED2F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -249,6 +255,7 @@ Global
 		{70F9F8C7-77F3-4B0C-A440-0F606CCAB0F2} = {F01E00AB-23D6-401E-A052-4781EC3F8080}
 		{BED608AC-2B02-40CD-AE74-3AF2BA7733C6} = {F01E00AB-23D6-401E-A052-4781EC3F8080}
 		{F99F6C4A-42D5-468F-86A0-3D9AA107D646} = {F01E00AB-23D6-401E-A052-4781EC3F8080}
+		{506B4AAA-2601-4020-9E42-3EB5008ED2F3} = {F01E00AB-23D6-401E-A052-4781EC3F8080}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {238B235E-2AF7-4204-91ED-3907BC09DE3C}
