@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace PokemonTrainer
 {
+    // Exercise: Additional Problems Task #4
+
     public class Trainer
     {
         private string name;
