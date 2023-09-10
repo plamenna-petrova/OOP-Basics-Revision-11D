@@ -79,15 +79,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaloriesForPizza", "Exercis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Static-Fields-And-Methods", "Static-Fields-And-Methods", "{464E2A0A-E634-41CB-8CF3-E2018C0B4E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonClassDefinition", "Exercises\Static-Fields-And-Methods\PersonClassDefinition\PersonClassDefinition.csproj", "{2A8892A5-5D72-478C-9A75-92553F7F8647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonClassDefinition", "Exercises\Static-Fields-And-Methods\PersonClassDefinition\PersonClassDefinition.csproj", "{2A8892A5-5D72-478C-9A75-92553F7F8647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Exercises\Static-Fields-And-Methods\Geometry\Geometry.csproj", "{C4EFE180-5D40-492E-80EB-2F6F8718E8E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry", "Exercises\Static-Fields-And-Methods\Geometry\Geometry.csproj", "{C4EFE180-5D40-492E-80EB-2F6F8718E8E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRootRequest", "Exercises\Static-Fields-And-Methods\SquareRootRequest\SquareRootRequest.csproj", "{2661FC67-CD8C-4C1A-9BCE-10D45D58FF01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquareRootRequest", "Exercises\Static-Fields-And-Methods\SquareRootRequest\SquareRootRequest.csproj", "{2661FC67-CD8C-4C1A-9BCE-10D45D58FF01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneShop", "Exercises\Static-Fields-And-Methods\OneShop\OneShop.csproj", "{C4C9C667-C828-48C5-8C2D-1CCD06AA621C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneShop", "Exercises\Static-Fields-And-Methods\OneShop\OneShop.csproj", "{C4C9C667-C828-48C5-8C2D-1CCD06AA621C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banker", "Exercises\Static-Fields-And-Methods\Banker\Banker.csproj", "{33255F90-6571-4B6C-BEF4-B8864E890647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banker", "Exercises\Static-Fields-And-Methods\Banker\Banker.csproj", "{33255F90-6571-4B6C-BEF4-B8864E890647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional-Tasks", "Additional-Tasks", "{48993663-7EE8-4D65-BB1F-79628AFAF37C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargoTransportation", "Exercises\Additional-Tasks\CargoTransportation\CargoTransportation.csproj", "{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars", "Exercises\Additional-Tasks\StarWars\StarWars.csproj", "{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonestDark", "Exercises\Additional-Tasks\DungeonestDark\DungeonestDark.csproj", "{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -247,6 +255,18 @@ Global
 		{33255F90-6571-4B6C-BEF4-B8864E890647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33255F90-6571-4B6C-BEF4-B8864E890647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33255F90-6571-4B6C-BEF4-B8864E890647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -294,6 +314,10 @@ Global
 		{2661FC67-CD8C-4C1A-9BCE-10D45D58FF01} = {464E2A0A-E634-41CB-8CF3-E2018C0B4E0D}
 		{C4C9C667-C828-48C5-8C2D-1CCD06AA621C} = {464E2A0A-E634-41CB-8CF3-E2018C0B4E0D}
 		{33255F90-6571-4B6C-BEF4-B8864E890647} = {464E2A0A-E634-41CB-8CF3-E2018C0B4E0D}
+		{48993663-7EE8-4D65-BB1F-79628AFAF37C} = {8FFBAF16-3611-43AE-B2EE-417E8624BC35}
+		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
+		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
+		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {238B235E-2AF7-4204-91ED-3907BC09DE3C}
