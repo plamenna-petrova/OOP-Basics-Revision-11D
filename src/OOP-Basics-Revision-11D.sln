@@ -91,11 +91,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banker", "Exercises\Static-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional-Tasks", "Additional-Tasks", "{48993663-7EE8-4D65-BB1F-79628AFAF37C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargoTransportation", "Exercises\Additional-Tasks\CargoTransportation\CargoTransportation.csproj", "{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoTransportation", "Exercises\Additional-Tasks\CargoTransportation\CargoTransportation.csproj", "{F9A47201-E813-40A4-87E8-0CDA93D4AAB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars", "Exercises\Additional-Tasks\StarWars\StarWars.csproj", "{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars", "Exercises\Additional-Tasks\StarWars\StarWars.csproj", "{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonestDark", "Exercises\Additional-Tasks\DungeonestDark\DungeonestDark.csproj", "{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonestDark", "Exercises\Additional-Tasks\DungeonestDark\DungeonestDark.csproj", "{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practical-Exams", "Practical-Exams", "{8C5DAB9A-7E75-402B-985A-B7FE6AF097A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandPrix", "Exercises\Practical-Exams\Grand-Prix\GrandPrix\GrandPrix.csproj", "{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -267,6 +271,10 @@ Global
 		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -318,6 +326,8 @@ Global
 		{F9A47201-E813-40A4-87E8-0CDA93D4AAB4} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
 		{50C0FF57-A4F1-4370-9AF3-E1CBFAA27646} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
 		{80BCE637-4D43-47B5-9B7D-309F34A9DBCE} = {48993663-7EE8-4D65-BB1F-79628AFAF37C}
+		{8C5DAB9A-7E75-402B-985A-B7FE6AF097A1} = {8FFBAF16-3611-43AE-B2EE-417E8624BC35}
+		{9FFDD1C1-EFCB-4BDF-BFD8-09735DE763A3} = {8C5DAB9A-7E75-402B-985A-B7FE6AF097A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {238B235E-2AF7-4204-91ED-3907BC09DE3C}
