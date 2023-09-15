@@ -10,7 +10,7 @@ namespace GrandPrix.Models.Drivers
         public AggressiveDriver(string name, Car car) 
             : base(name, car)
         {
-            this.FuelConsumptionPerKm = 2.7f;
+            this.FuelConsumptionPerKm = 2.7;
         }
     }
 }

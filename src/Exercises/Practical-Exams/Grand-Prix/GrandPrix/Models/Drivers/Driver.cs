@@ -9,13 +9,13 @@ namespace GrandPrix.Models.Drivers
     {
         private string name;
 
-        private float totalTime;
+        private double totalTime;
 
         private Car car;
 
-        private float fuelConsumptionPerKm;
+        private double fuelConsumptionPerKm;
 
-        private float speed;
+        private double speed;
 
         private string failureReason;
 
@@ -40,7 +40,7 @@ namespace GrandPrix.Models.Drivers
             }
         }
 
-        public float TotalTime
+        public double TotalTime
         {
             get
             {
@@ -66,7 +66,7 @@ namespace GrandPrix.Models.Drivers
             }
         }
 
-        public float FuelConsumptionPerKm
+        public double FuelConsumptionPerKm
         {
             get
             {
@@ -79,7 +79,7 @@ namespace GrandPrix.Models.Drivers
             }
         }
 
-        public float Speed
+        public double Speed
         {
             get
             {

@@ -172,18 +172,16 @@ namespace GrandPrix.Controllers
             }
         }
 
-        public string CompleteLaps(List<string> commandArgs) 
+        public void CompleteLaps(List<string> commandArgs) 
         {
             int numberOfLaps = int.Parse(commandArgs[0]);
 
             bool isNumberOfLapsInvalid = false;
 
-            string completedLapsMessage = null;
-
             if (numberOfLaps > Track.LapsNumber - CompletedLaps)
             {
                 isNumberOfLapsInvalid = true;
-                completedLapsMessage = $"There is no time! On lap {CompletedLaps}";
+                Console.WriteLine($"There is no time! On lap {CompletedLaps}");
             }
 
             if (!isNumberOfLapsInvalid)
@@ -198,17 +196,18 @@ namespace GrandPrix.Controllers
                     {
                         Driver currentDriver = racingDrivers[j];
 
-                        currentDriver.Speed = (currentDriver.Car.HP + currentDriver.Car.Tyre.Degradation) / currentDriver.Car.FuelAmount;
+                        currentDriver.Speed = (currentDriver.Car.HP + currentDriver.Car.Tyre.Degradation) / 
+                                              currentDriver.Car.FuelAmount;
 
                         if (currentDriver is AggressiveDriver)
                         {
-                            currentDriver.Speed *= 3;
+                            currentDriver.Speed *= 1.3;
                         }
 
-                        currentDriver.TotalTime += 60 / track.Length / currentDriver.Speed;
+                        currentDriver.TotalTime += 60 / (track.Length / currentDriver.Speed);
                         currentDriver.Car.FuelAmount -= track.Length * currentDriver.FuelConsumptionPerKm;
 
-                        if (currentDriver.Car.FuelAmount <= 0)
+                        if (currentDriver.Car.FuelAmount < 0)
                         {
                             currentDriver.FailureReason = "Out of fuel";
                         }
@@ -234,7 +233,7 @@ namespace GrandPrix.Controllers
                             }
                         }
 
-                        if (CompletedLaps > 0 && j != racingDrivers.Count - 1)
+                        if (j != racingDrivers.Count - 1)
                         {
                             int overtakeInterval = 2;
 
@@ -276,12 +275,18 @@ namespace GrandPrix.Controllers
                                 {
                                     Driver frontDriver = racingDriversByTotalTime[currentDriverIndex - 1];
 
-                                    if (currentDriver.TotalTime - frontDriver.TotalTime <= overtakeInterval)
+                                    if (!currentDriver.IsOvertaken)
                                     {
-                                        frontDriver.IsOvertaken = true;
-                                        currentDriver.TotalTime -= overtakeInterval;
-                                        currentDriver.TotalTime += overtakeInterval;
-                                        completedLapsMessage = $"{currentDriver.Name} has overtaken {frontDriver.Name} on lap {CompletedLaps}";
+                                        double timeDifference = currentDriver.TotalTime - frontDriver.TotalTime;
+
+                                        if (timeDifference > 0 && timeDifference <= overtakeInterval)
+                                        {
+                                            frontDriver.IsOvertaken = true;
+                                            currentDriver.TotalTime -= overtakeInterval;
+                                            currentDriver.TotalTime += overtakeInterval;
+                                            Console.WriteLine($"{currentDriver.Name} has overtaken {frontDriver.Name} " +
+                                                $"on lap {CompletedLaps}.");
+                                        }
                                     }
                                 }
                             }
@@ -293,8 +298,6 @@ namespace GrandPrix.Controllers
                     CompletedLaps++;
                 }
             }
-
-            return completedLapsMessage;
         }
 
         public string GetLeaderboard() 
@@ -303,17 +306,27 @@ namespace GrandPrix.Controllers
             leaderBoardStringBuilder.AppendLine($"Lap {CompletedLaps}/{Track.LapsNumber}");
 
             List<Driver> driversOrderedByTotalTime = drivers
+                .Where(d => d.FailureReason == null)
                 .OrderBy(d => d.TotalTime)
                 .ToList();
 
-            for (int i = 0; i < driversOrderedByTotalTime.Count; i++)
+            int rankingCounter = 0;
+
+            foreach (var driver in driversOrderedByTotalTime)
             {
-                leaderBoardStringBuilder.AppendLine($"{i + 1} {driversOrderedByTotalTime[i].Name} {driversOrderedByTotalTime[i].TotalTime}");
-                
-                if (driversOrderedByTotalTime[i].FailureReason != null)
-                {
-                    leaderBoardStringBuilder.Append($" {driversOrderedByTotalTime[i].FailureReason}");
-                }
+                leaderBoardStringBuilder.AppendLine($"{rankingCounter + 1} {driver.Name} {Math.Round(driver.TotalTime, 3):F3}");
+                rankingCounter++;
+            }
+
+            List<Driver> dnfDrivers = drivers
+                .Where(d => d.FailureReason != null)
+                .Reverse()
+                .ToList();
+
+            foreach (var driver in dnfDrivers)
+            {
+                leaderBoardStringBuilder.AppendLine($"{rankingCounter + 1} {driver.Name} {driver.FailureReason}");
+                rankingCounter++;
             }
 
             return leaderBoardStringBuilder.ToString(); 

@@ -8,11 +8,11 @@ namespace GrandPrix.Classes.Tires
     {
         private string name;
 
-        private float hardness;
+        private double hardness;
 
-        private float degradation;
+        private double degradation;
 
-        public Tyre(float hardness)
+        public Tyre(double hardness)
         {
             this.Hardness = hardness;
             this.Degradation = 100;
@@ -31,7 +31,7 @@ namespace GrandPrix.Classes.Tires
             }
         }
 
-        public float Hardness
+        public double Hardness
         {
             get
             {
@@ -44,7 +44,7 @@ namespace GrandPrix.Classes.Tires
             }
         }
 
-        public virtual float Degradation
+        public virtual double Degradation
         {
             get
             {

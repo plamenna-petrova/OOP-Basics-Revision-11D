@@ -29,8 +29,7 @@ namespace GrandPrix
                         raceTower.RegisterDriver(racingCommandArguments);
                         break;
                     case "CompleteLaps":
-                        string completedLapsInfo = raceTower.CompleteLaps(racingCommandArguments);
-                        Console.WriteLine(completedLapsInfo);
+                        raceTower.CompleteLaps(racingCommandArguments);
 
                         if (raceTower.CompletedLaps == raceTower.Track.LapsNumber)
                         {
@@ -45,7 +44,7 @@ namespace GrandPrix
                         raceTower.DriverBoxes(racingCommandArguments);
                         break;
                     case "ChangeWeather":
-                        raceTower.DriverBoxes(racingCommandArguments);
+                        raceTower.ChangeWeather(racingCommandArguments);
                         break;
                 }
             }
@@ -53,7 +52,8 @@ namespace GrandPrix
             if (!isRacingCommandsSendingActive)
             {
                 Driver winnerInRace = raceTower.Drivers
-                    .OrderByDescending(d => d.TotalTime)
+                    .Where(d => d.FailureReason == null)
+                    .OrderBy(d => d.TotalTime)
                     .First();
 
                 Console.WriteLine($"{winnerInRace.Name} wins the race for {Math.Round(winnerInRace.TotalTime, 3):F3} seconds.");

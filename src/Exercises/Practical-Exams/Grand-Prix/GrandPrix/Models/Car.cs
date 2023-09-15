@@ -9,11 +9,11 @@ namespace GrandPrix.Classes
 
         private int hp;
 
-        private float fuelAmount;
+        private double fuelAmount;
 
         private Tyre tyre;
 
-        public Car(int hp, float fuelAmount, Tyre tyre)
+        public Car(int hp, double fuelAmount, Tyre tyre)
         {
             this.hp = hp;
             this.fuelAmount = fuelAmount;
@@ -33,7 +33,7 @@ namespace GrandPrix.Classes
             }
         }
 
-        public float FuelAmount
+        public double FuelAmount
         {
             get
             {
