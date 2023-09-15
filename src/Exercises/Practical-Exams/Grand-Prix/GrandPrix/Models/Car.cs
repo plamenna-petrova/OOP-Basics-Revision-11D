@@ -1,12 +1,12 @@
 ﻿using GrandPrix.Classes.Tires;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GrandPrix.Classes
 {
     public class Car
     {
+        private const int FuelAmountMaxCapacity = 160;
+
         private int hp;
 
         private float fuelAmount;
@@ -42,7 +42,14 @@ namespace GrandPrix.Classes
 
             set
             {
-                this.fuelAmount = value;
+                if (value > FuelAmountMaxCapacity)
+                {
+                    this.fuelAmount = FuelAmountMaxCapacity;
+                }
+                else
+                {
+                    this.fuelAmount = value;
+                }
             }
         }
 

@@ -44,7 +44,7 @@ namespace GrandPrix.Classes.Tires
             }
         }
 
-        public float Degradation
+        public virtual float Degradation
         {
             get
             {

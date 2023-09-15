@@ -17,6 +17,10 @@ namespace GrandPrix.Models.Drivers
 
         private float speed;
 
+        private string failureReason;
+
+        private bool isOvertaken;
+
         public Driver(string name, Car car)
         {
             Name = name;
@@ -27,12 +31,12 @@ namespace GrandPrix.Models.Drivers
         {
             get
             {
-                return name;
+                return this.name;
             }
 
             set
             {
-                name = value;
+                this.name = value;
             }
         }
 
@@ -40,12 +44,12 @@ namespace GrandPrix.Models.Drivers
         {
             get
             {
-                return totalTime;
+                return this.totalTime;
             }
 
             set
             {
-                totalTime = value;
+                this.totalTime = value;
             }
         }
 
@@ -53,12 +57,12 @@ namespace GrandPrix.Models.Drivers
         {
             get
             {
-                return car;
+                return this.car;
             }
 
             set
             {
-                car = value;
+                this.car = value;
             }
         }
 
@@ -66,12 +70,12 @@ namespace GrandPrix.Models.Drivers
         {
             get
             {
-                return fuelConsumptionPerKm;
+                return this.fuelConsumptionPerKm;
             }
 
             set
             {
-                fuelConsumptionPerKm = value;
+                this.fuelConsumptionPerKm = value;
             }
         }
 
@@ -79,12 +83,38 @@ namespace GrandPrix.Models.Drivers
         {
             get
             {
-                return speed;
+                return this.speed;
             }
 
             set
             {
-                speed = value;
+                this.speed = value;
+            }
+        }
+
+        public string FailureReason
+        {
+            get
+            {
+                return this.failureReason;
+            }
+
+            set
+            {
+                this.failureReason = value;
+            }
+        }
+
+        public bool IsOvertaken
+        {
+            get
+            {
+                return this.isOvertaken;
+            }
+
+            set
+            {
+                this.isOvertaken = value;
             }
         }
     }
